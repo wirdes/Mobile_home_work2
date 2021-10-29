@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,6 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
 
   Widget build(BuildContext context) {
@@ -72,7 +76,7 @@ class MyHomePage extends StatelessWidget {
 }
 
 class ProductBox extends StatelessWidget {
-  ProductBox(
+   ProductBox(
       {Key key = const Key("any_key"),
       required this.name,
       required this.description,
@@ -89,9 +93,8 @@ class ProductBox extends StatelessWidget {
       height: 275,
       width: double.infinity,
       decoration: BoxDecoration(
-        // ignore: unnecessary_new
         color: Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius:const BorderRadius.only(
             topLeft: Radius.circular(10),
             topRight: Radius.circular(10),
             bottomLeft: Radius.circular(10),
@@ -120,7 +123,7 @@ class ProductBox extends StatelessWidget {
                 const EdgeInsets.only(left: 15, top: 5, right: 15, bottom: 5),
             child: Text(
               name,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.bold),
@@ -132,7 +135,7 @@ class ProductBox extends StatelessWidget {
             child: Text(
               description,
               maxLines: 2,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 14,
                   fontWeight: FontWeight.bold),
@@ -145,7 +148,7 @@ class ProductBox extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 0, top: 5, right: 10, bottom: 0),
                   child: Text("$price ₺",
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 14,
                           color: Colors.red,
                           fontWeight: FontWeight.bold))),
