@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
@@ -89,7 +86,7 @@ class ProductBox extends StatelessWidget {
   final String image;
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, top: 15, right: 10, bottom: 15),
+      margin: const EdgeInsets.only(left: 10, top: 15, right: 10, bottom: 15),
       height: 275,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -146,7 +143,7 @@ class ProductBox extends StatelessWidget {
             children: <Widget>[
               Padding(
                   padding:
-                      EdgeInsets.only(left: 0, top: 5, right: 10, bottom: 0),
+                      const EdgeInsets.only(left: 0, top: 5, right: 10, bottom: 0),
                   child: Text("$price ₺",
                       style: const TextStyle(
                           fontSize: 14,
